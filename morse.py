@@ -22,18 +22,14 @@ def callLetter(letter):
         for i in morseAlphabet[letter]:
             if int(i) == 0:
                 gpio.output(OUT_PIN, 1)
-                gpio.output(17, 1)
                 time.sleep(UNIT)
                 gpio.output(OUT_PIN, 0)
-                gpio.output(17, 0)
-                time.sleep(unit)
+                time.sleep(UNIT)
            
             elif int(i) == 1:
                 gpio.output(OUT_PIN, 1)
-                gpio.output(17, 1)
                 time.sleep(UNIT * 3)
                 gpio.output(OUT_PIN, 0)
-                gpio.output(17, 0)
                 time.sleep(UNIT)
            
         time.sleep(UNIT * 3)
